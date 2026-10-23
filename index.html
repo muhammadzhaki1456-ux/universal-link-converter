@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Periksa pengalihan link dan temukan URL MediaFire jika tersedia.">
+  <title>Universal Link Converter</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="panel">
+      <div class="logo" aria-hidden="true">↗</div>
+      <p class="eyebrow">LINK CHECKER</p>
+      <h1>Universal Link Converter</h1>
+      <p class="intro">Tempel link dari berbagai situs. Kami akan memeriksa pengalihannya dan mencari URL MediaFire jika bisa ditemukan.</p>
+      <form id="convert-form">
+        <label for="url">Link yang ingin diperiksa</label>
+        <textarea id="url" name="url" rows="3" maxlength="2048" placeholder="https://contoh.com/..." required></textarea>
+        <button id="submit" type="submit">Periksa Link <span aria-hidden="true">→</span></button>
+      </form>
+      <div id="result" class="result" hidden aria-live="polite">
+        <h2 id="result-title">Hasil pemeriksaan</h2>
+        <p id="message"></p>
+        <div id="url-row" class="url-row" hidden>
+          <a id="mediafire-url" href="#" target="_blank" rel="noopener noreferrer">Buka link MediaFire</a>
+          <button id="copy" class="secondary" type="button">Salin URL</button>
+        </div>
+        <p id="final-url" class="final-url" hidden></p>
+      </div>
+      <div class="note"><strong>Catatan:</strong> Tidak semua link memiliki tujuan MediaFire. CAPTCHA, login, halaman yang hanya berjalan dengan JavaScript, dan akses yang diblokir tidak dapat dilewati alat ini.</div>
+      <footer>Gratis digunakan • Tidak perlu akun • Jangan masukkan link pribadi atau rahasia</footer>
+    </section>
+  </main>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
